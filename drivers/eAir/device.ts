@@ -417,7 +417,7 @@ class MyeAirDevice extends eAir {
         this.registerCapabilityListener('eAirstatus_mode', async (value) => {
             this.log('Changes to :', value);
             await this.seteAirValue(value);
-            await this.homey.flow.getDeviceTriggerCard('eAirstatus_mode_changed')
+            await this.homey.flow.getDeviceTriggerCard('eAirstatus_mode_changed2')
                 .trigger(this)
                 .catch(this.error);
         });
